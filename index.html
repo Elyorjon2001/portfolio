@@ -71,30 +71,15 @@
         <p>&copy; 2025 Sulaymonqulov Elyor.</p>
     </footer>
 
-    <!-- Modal oynasi -->
-    <div class="modal" id="resumeModal">
-        <div class="modal-content">
-            <p>Rezyume yuklab olinsinmi?</p>
-            <button class="btn btn-primary" onclick="downloadResume()">Ha</button>
-            <button class="btn btn-danger" onclick="closeModal()">Yo'q</button>
-        </div>
+    <button onclick="showDownloadDialog()">Rezyumeni yuklab olish</button>
+
+<div id="downloadDialog" class="modal">
+    <div class="modal-content">
+        <p>Rezyumeni yuklab olmoqchimisiz?</p>
+        <a href="downloads/resume.docx" download class="btn">Ha, yuklab olish</a>
+        <button onclick="closeDialog()" class="btn">Yo‘q, bekor qilish</button>
     </div>
-
-    <script>
-        function openModal() {
-            document.getElementById("resumeModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("resumeModal").style.display = "none";
-            window.location.href = "#home"; // Asosiy sahifaga qaytish
-        }
-
-        function downloadResume() {
-            window.location.href = "resume.pdf"; // Faylni yuklab olish
-            closeModal();
-        }
-    </script>
+</div>
 
 </body>
 </html>
