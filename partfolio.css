@@ -105,8 +105,8 @@ nav ul li a:hover {
 #home {
     text-align: center;
     padding: 50px 10px;
-    z-index: 1;
     min-height: 30vh;
+    background-color:white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,16 +132,6 @@ nav ul li a:hover {
     z-index: 2;
 }
 
-#home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-}
 
 /* Sektsiyalar */
 section {
