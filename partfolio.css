@@ -104,9 +104,9 @@ nav ul li a:hover {
 /* Bosh sahifa */
 #home {
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 10px;
     z-index: 1;
-    min-height: 100vh;
+    min-height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
