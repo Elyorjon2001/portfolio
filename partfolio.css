@@ -106,8 +106,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 100px 20px;
     color: white;
-    background: url('background-image.jpg') no-repeat center center/cover;
-    position: relative;
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);    position: relative;
     z-index: 1;
     min-height: 100vh;
     display: flex;
