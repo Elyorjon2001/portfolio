@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="partfolio.css">
+</head>
+<body>
+
     <header>
         <nav>
             <h2 class="logo">Sulaymonqulov Elyor</h2>
@@ -24,48 +27,75 @@
                     <small><a href="tel:+998946061148"> | +998 94 606 11 48</a></small>
                 </div>
             </div>
-            
         </nav>
     </header>
     
-    
     <section id="home">
         <h1>Assalomu alaykum, men Sulaymonqulov Elyor!</h1>
-        <p>Men web dasturlashga qiziqaman va PHP Laravelda  loyihalarini ishlab chiqaman.</p>
+        <p>Men web dasturlashga qiziqaman va PHP Laravelda loyihalarini ishlab chiqaman.</p>
         <img src="myphoto.jpg" alt="Portfolio banner" class="profile-img">
+        
+        <!-- Rezyume yuklash tugmasi -->
+        <button class="btn btn-primary" onclick="openModal()">Rezyume Yuklash</button>
     </section>
-    
+
     <section id="about">
         <h2>Men haqimda</h2>
-        <p>Men Laravel frameworkida backend qismini ishlab chiqaman, MySQL orqali bazalarni boshqaraman. Frontend qismni esa HTML va CSS yordamida yarataman yoki tayyor shablonlarni moslashtiraman. Web saytlar uchun autentifikatsiya va ma'lumotlar bazasi bilan ishlashni  bajara olaman.</p>
+        <p>Men Laravel frameworkida backend qismini ishlab chiqaman, MySQL orqali bazalarni boshqaraman. Frontend qismni esa HTML va CSS yordamida yarataman yoki tayyor shablonlarni moslashtiraman. Web saytlar uchun autentifikatsiya va ma'lumotlar bazasi bilan ishlashni bajara olaman.</p>
         <p>Rus tilini so‘zlashuv darajasida bilaman va ingliz tilida dasturlashga oid terminlarni tushunaman.</p>
     </section>
-    
+
     <section id="projects">
         <h2>Loyihalar</h2>
         <div class="project">
             <h3>Xo'jalik Ishlarini Bajarish Dasturi</h3>
             <p>Bu web dastur uy tozalovchi, bog‘bon, haydovchi, elektrik, molyar, oyna va gilam yuvish xizmatlari haqida ma’lumotlar joylash mumkin bo‘lgan kategoriya va teglar tizimiga asoslangan.</p>
-        <a href="https://github.com/Elyorjon2001" class="btn btn-primary">Kodni ko'rish</a>
+            <a href="https://github.com/Elyorjon2001" class="btn btn-primary">Kodni ko'rish</a>
         </div>
         <div class="project">
             <h3>Premier Avto City</h3>
             <p>Avtosalon uchun web sayt. Sayt avtomobillar haqidagi ma’lumotlarni, rasmlarni va narxlarini chiqaradi. Foydalanuvchilar o‘zlariga kerakli avtomobilni qidirib, uning tafsilotlarini ko‘rib chiqishlari va call center orqali bog‘lanishlari mumkin.</p>
-        <a href="https://github.com/Elyorjon2001" class="btn btn-primary">Kodni ko'rish</a>
+            <a href="https://github.com/Elyorjon2001" class="btn btn-primary">Kodni ko'rish</a>
         </div>
     </section>
-    
+
     <section id="contact">
         <h2>Bog‘lanish</h2>
-        <p>Email: <a href="sulaymonqulovelyor@gmail.com">sulaymonqulovelyor@gmail.com</a></p>
-        <p>Telefon: <a href="+998 94 606 11 48">+998 94 606 11 48</a></p>
+        <p>Email: <a href="mailto:sulaymonqulovelyor@gmail.com">sulaymonqulovelyor@gmail.com</a></p>
+        <p>Telefon: <a href="tel:+998946061148">+998 94 606 11 48</a></p>
         <p>Telegram: <a href="sulaymon_off">sulaymon_off</a></p>
-        <p>instagram: <a href="https://www.instagram.com/sulaymonqulovelyor?utm_source=qr&igsh=NTZmZGx2c2J2MXRl">Insta_ElyorSulaymonqulov</a></p>
-
+        <p>Instagram: <a href="https://www.instagram.com/sulaymonqulovelyor?utm_source=qr&igsh=NTZmZGx2c2J2MXRl">Insta_ElyorSulaymonqulov</a></p>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 Sulaymonqulov Elyor.</p>
     </footer>
+
+    <!-- Modal oynasi -->
+    <div class="modal" id="resumeModal">
+        <div class="modal-content">
+            <p>Rezyume yuklab olinsinmi?</p>
+            <button class="btn btn-primary" onclick="downloadResume()">Ha</button>
+            <button class="btn btn-danger" onclick="closeModal()">Yo'q</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("resumeModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("resumeModal").style.display = "none";
+            window.location.href = "#home"; // Asosiy sahifaga qaytish
+        }
+
+        function downloadResume() {
+            window.location.href = "resume.pdf"; // Faylni yuklab olish
+            closeModal();
+        }
+    </script>
+
 </body>
 </html>
+
