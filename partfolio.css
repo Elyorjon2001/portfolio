@@ -3,15 +3,15 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    background-color: #f0f0f5;
     color: #333;
 }
 
 /* Navbar */
 header {
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
     padding: 15px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -25,7 +25,7 @@ nav {
 
 .logo {
     color: #fff;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -42,113 +42,99 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #fdfbfb;
+    color: #ffeb3b;
 }
 
 /* Bosh sahifa */
 #home {
     text-align: center;
-    padding: 120px 20px;
-    color: #fff;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 100px 20px;
+    color: white;
+    background: url('background-image.jpg') no-repeat center center/cover;
+    position: relative;
 }
 
 #home h1 {
-    font-size: 40px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 42px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: bold;
 }
 
 .profile-img {
     width: 160px;
     height: 160px;
     border-radius: 50%;
+    border: 4px solid white;
     object-fit: cover;
-    border: 5px solid #fff;
+    object-position: center top;
 }
 
-/* Sahifalar */
-#about, #projects, #contact {
+/* Sektsiyalar */
+section {
     padding: 60px 20px;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 40px auto;
     background: white;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
 }
 
 /* Loyihalar */
 .project {
-    background: linear-gradient(135deg, #ff9966, #ff5e62);
-    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    padding: 25px;
     margin: 20px 0;
-    border-left: 5px solid #ff4b2b;
+    border-left: 6px solid #0072ff;
     border-radius: 8px;
-    color: white;
-    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    border-left-color: #ffeb3b;
 }
 
 /* Bog‘lanish */
 #contact {
     text-align: center;
-    background: linear-gradient(135deg, #56ab2f, #a8e063);
-    color: white;
 }
 
 footer {
-    background: #333;
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 30px;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-}
-
-.contact-item a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.contact-item a:hover {
-    text-decoration: underline;
-    color: #ffcc00;
+    margin-top: 40px;
+    font-size: 16px;
 }
 
 /* Tugmalar */
 .btn {
     margin: 10px;
-    padding: 12px 24px;
+    padding: 12px 25px;
     border: none;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    color: white;
     font-size: 16px;
     font-weight: bold;
-    text-transform: uppercase;
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
-    color: white;
-    border-radius: 8px;
-    transition: 0.3s;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
     transform: scale(1.05);
 }
 
