@@ -1,67 +1,212 @@
-/* Umumiy stillar */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f5;
+    color: #333;
 }
 
 /* Navbar */
-.navbar {
+header {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
-    color: white;
-    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1000;
 }
 
-/* Mobil menyu tugmasi (hamburger) */
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Hamburger menyu */
 .menu-icon {
     display: block;
     font-size: 30px;
+    color: white;
     cursor: pointer;
     position: absolute;
     right: 20px;
     z-index: 1001;
 }
 
-/* Mobil menyu */
+/* Mobil menyuni default holatda yashirib qo'yamiz */
 .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    text-align: center;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+    display: none;
 }
 
-.mobile-menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
+/* Ekran o'lchami 768px dan kichik bo'lsa, menyuni ko'rsatamiz */
+@media screen and (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+    }
+    .mobile-menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+    }
 }
 
-/* Mobil menyu ochilganda */
-.mobile-menu.open {
-    transform: translateX(0);
-}
-
-/* Desktop versiyada yashirish */
+/* Desktopda yashirish */
 @media screen and (min-width: 769px) {
     .mobile-menu {
         display: none !important;
     }
-    .menu-icon {
+}
+
+.mobile-menu a:hover {
+    background: #00c6ff;
+}
+
+@media (max-width: 768px) {
+    nav ul {
         display: none;
     }
+    .menu-icon {
+        display: block;
+    }
 }
+
+/* Bosh sahifa */
+#home {
+    text-align: center;
+    padding: 50px 10px;
+    min-height: 30vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 42px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    object-position: center top;
+    position: relative;
+    z-index: 2;
+}
+
+/* Sektsiyalar */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+/* Loyihalar */
+.project {
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 6px solid #0072ff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    border-left-color: #ffeb3b;
+}
+
+/* Bog‘lanish */
+#contact {
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Tugmalar */
+.btn {
+    margin: 10px auto;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transform: scale(1.05);
+}
+
 
 
 
