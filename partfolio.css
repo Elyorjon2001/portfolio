@@ -122,14 +122,21 @@ footer {
     font-size: 16px;
     font-weight: bold;
     border-radius: 6px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
     text-align: center;
+    max-width: 200px;
 }
 
 .btn:hover {
     background: linear-gradient(90deg, #00c6ff, #0072ff);
     transform: scale(1.05);
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 
