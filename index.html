@@ -13,7 +13,7 @@
         <h2 class="logo">Sulaymonqulov Elyor</h2>
         
         <!-- Mobil menyu tugmasi -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-icon" id="menuIcon">☰</div>
 
         <ul class="menu">
             <li><a href="#home">Bosh sahifa</a></li>
@@ -79,14 +79,24 @@
     <p>&copy; 2025 Sulaymonqulov Elyor.</p>
 </footer>
 
+<!-- JavaScript kodini shu yerga qo‘shdim -->
 <script>
-    function toggleMenu() {
-        var menu = document.getElementById("mobileMenu");
-        menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+        var menuIcon = document.getElementById("menuIcon");
+        var mobileMenu = document.getElementById("mobileMenu");
+
+        menuIcon.addEventListener("click", function () {
+            if (mobileMenu.style.display === "flex") {
+                mobileMenu.style.display = "none";
+            } else {
+                mobileMenu.style.display = "flex";
+            }
+        });
+    });
 </script>
 
 </body>
 </html>
+
 
 
